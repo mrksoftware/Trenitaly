@@ -14,6 +14,20 @@ app.get('/hello', function(req, res) {
   res.render('hello', { message: 'Congrats, you just set up your app!' });
 });
 
+//Get train's price
+app.get('/getTrainPrice', function(req, res) {
+  var departingStation = res.send(req.query.from);
+  var arrivalStation = res.send(req.query.to);
+  res.render('hello', { message: 'Congrats, you just set up your app!' });
+});
+
+//Get solutions delay
+app.get('/getSolutionsDelays', function(req, res) {
+  var departingStation = res.send(req.query.stationId);
+  var solutions = res.send(req.query.solutionsIds);
+  res.render('hello', { message: 'Congrats, you just set up your app!' });
+});
+
 // // Example reading from the request query string of an HTTP get request.
 // app.get('/test', function(req, res) {
 //   // GET http://example.parseapp.com/test?message=hello
